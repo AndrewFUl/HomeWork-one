@@ -1,6 +1,3 @@
-package com.fedosin;
-
-
 public class Animal {
 
     private String name;
@@ -71,7 +68,7 @@ public class Animal {
 
 
     public String toString() {
-        return ("Привет! меня зовут " + name + ", мне " + age + " лет, я вешу - " + weight + " кг, мой цвет - " + color);
+        return ("Привет! Меня зовут: " + name + ", мне - " + age + " лет, я вешу - " + weight + " кг, мой цвет - " + color);
     }
 
 
