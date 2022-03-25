@@ -1,6 +1,4 @@
-
-
-import javafx.animation.ScaleTransition;
+package com.fedosin;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -20,31 +18,21 @@ public class Main {
                     System.out.println ("спросить какое животное(cat/dog/duck)");
                     String com = scanner.next();
                     if (com.equals("cat")) {
-                        System.out.println ("Уточните: имя, возраст, вес, цвет");
-                        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-                        String name = reader.readLine();
-                        int age = Integer.parseInt(reader.readLine());
-                        int weight = Integer.parseInt(reader.readLine());
-                        String color = reader.readLine();
-                        Animal cat = new Animal(name, age, weight, color);
+                        Animal cat = new Cat();
+                        generetAnimal(cat, scanner);
+                        cat.say();
                         animals.add(cat);
+
                     } else if (com.equals("dog")) {
-                        System.out.println("Уточните: имя, возраст, вес, цвет");
-                        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-                        String name = reader.readLine();
-                        int age = Integer.parseInt(reader.readLine());
-                        int weight = Integer.parseInt(reader.readLine());
-                        String color = reader.readLine();
-                        Animal dog = new Animal( name, age, weight, color);
+                        Animal dog = new Dog();
+                        generetAnimal(dog, scanner);
+                        dog.say();
                         animals.add(dog);
+
                     } else if (com.equals("duck")) {
-                        System.out.println("Уточните: имя, возраст, вес, цвет");
-                        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-                        String name = reader.readLine();
-                        int age = Integer.parseInt(reader.readLine());
-                        int weight = Integer.parseInt(reader.readLine());
-                        String color = reader.readLine();
-                        Animal duck = new Animal(name, age, weight, color);
+                        Animal duck = new Duck();
+                        generetAnimal(duck, scanner);
+                        duck.say();
                         animals.add(duck);
                     }
                     break;
@@ -62,4 +50,16 @@ public class Main {
             }
         }
     }
+
+    public static void generetAnimal(Animal animal, Scanner scanner) {
+        System.out.println("Имя");
+        animal.setName(scanner.next());
+        System.out.println("Возраст");
+        animal.setAge(scanner.nextInt());
+        System.out.println("Вес");
+        animal.setWeight(scanner.nextInt());
+        System.out.println("Цвет");
+        animal.setColor(scanner.next());
+    }
 }
+

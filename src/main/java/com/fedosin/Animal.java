@@ -1,3 +1,5 @@
+package com.fedosin;
+
 public class Animal {
 
     private String name;
@@ -66,7 +68,7 @@ public class Animal {
         this.color = color;
     }
 
-
+    @Override
     public String toString() {
         return ("Привет! Меня зовут: " + name + ", мне - " + age + " лет, я вешу - " + weight + " кг, мой цвет - " + color);
     }

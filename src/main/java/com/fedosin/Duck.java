@@ -1,7 +1,9 @@
+package com.fedosin;
+
 public class Duck extends Animal {
 
     public Duck (String name, int age, int weight, String color) {
-        super(name, 1, 10, "белый");
+        super (name, age, weight, color);
     }
 
     public Duck() {
