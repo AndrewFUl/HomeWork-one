@@ -20,20 +20,20 @@ public class Main {
                     if (com.equals("cat")) {
                         Animal cat = new Cat();
                         generetAnimal(cat, scanner);
-                        cat.say();
                         animals.add(cat);
+                        cat.say();
 
                     } else if (com.equals("dog")) {
                         Animal dog = new Dog();
                         generetAnimal(dog, scanner);
-                        dog.say();
                         animals.add(dog);
+                        dog.say();
 
                     } else if (com.equals("duck")) {
                         Animal duck = new Duck();
-                        generetAnimal(duck, scanner);
-                        duck.say();
+                        generetAnimal(duck, scanner);;
                         animals.add(duck);
+                        duck.say();
                     }
                     break;
 
